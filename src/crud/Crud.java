@@ -116,11 +116,11 @@ public class Crud {
 			System.out.println(
 					"-------------------------------------------------------------------------------------------");
 
-			while (resultSet.next()) {
+			 do {
 				String fullname = resultSet.getString("first_name") + " " + resultSet.getString("last_name");
 				System.out.printf("%-10d%-26s%-30s%-12d\n", resultSet.getInt("roll"), fullname,
 						resultSet.getString("address"), resultSet.getLong("contact"));
-			}
+			}while (resultSet.next());
 
 		} else {
 			System.out.println("No Records to Display !!!!!!");
